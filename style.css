@@ -1,0 +1,112 @@
+/* for the style */
+
+@import url('https://fonts.googleapis.com/css?family=Bangers|Oxygen|Roboto+Condensed|Roboto+Slab|ZCOOL+QingKe+HuangYou&display=swap');
+
+body 
+{
+    background-color: #000;
+    color: #7fffd4;
+    font-family: "Roboto Slab";
+    font-size: 18px;
+}
+
+.display-2 {
+    font-family: "Bangers";
+}
+
+#mainNavbar {
+    font-size: 1.5rem;
+    font-weight 100;
+}
+
+#mainNavbar .nav-link {
+    color: white;
+}
+
+#mainNavbar .nav-link:hover {
+    color: #80aaed;
+}
+
+#mainNavbar .navbar-brand {
+    color: #80aaed;
+    font-size: 1.5rem;
+    font-weight 100;
+}
+
+.navbar.scrolled {
+    background: rgb(222, 192, 222);
+    transition: background 500ms;
+}
+
+h1
+{
+    color: #007fff;
+}
+
+.slideshow { 
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.slideshow li { 
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 50s linear infinite; 
+}
+
+.slideshow li:nth-child(1) { 
+    background-image: url('./rhymeimgs/IMG_8894.JPG'); 
+}
+.slideshow li:nth-child(2) { 
+    background-image: url('./rhymeimgs/IMG_8900.JPG');
+    animation-delay: 10s; 
+}
+.slideshow li:nth-child(3) { 
+    background-image: url('./rhymeimgs/IMG_8897.JPG');
+    animation-delay: 20s; 
+}
+.slideshow li:nth-child(4) { 
+    background-image: url('./rhymeimgs/IMG_8898.JPG');
+    animation-delay: 30s; 
+}
+.slideshow li:nth-child(5) { 
+    background-image: url('./rhymeimgs/IMG_8901.JPG');
+    animation-delay: 40s; 
+}
+
+@keyframes imageAnimation { 
+    0% { 
+      opacity: 0; 
+      animation-timing-function: ease-in;
+    }
+    10% {
+      opacity: 1;
+      animation-timing-function: ease-out;
+    }
+    20% {
+      opacity: 1
+    }
+    30% {
+      opacity: 0
+    }
+}
+
+/* Older browser support - .no-cssanimations class added by modernizr */
+.no-cssanimations .slideshow li {
+	opacity: 1;
+}
